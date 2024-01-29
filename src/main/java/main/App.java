@@ -6,7 +6,7 @@ public class App
 {
     public static void main( String[] args )
     {
-        Animal animal = new Animal();
+        
         Zoo zoo = new Zoo();
         Scanner sc = new Scanner(System.in);
 
@@ -30,23 +30,24 @@ public class App
                     System.out.println("Mikä laji?");
                     String species;
                     species= sc.nextLine();
-                    animal.setSpecies(species);
+                    
                     System.out.println("Anna eläimen nimi:");
                     String name;
                     name= sc.nextLine();
-                    animal.setName(name);
+                    
                     System.out.println("Anna eläimen ikä:");
                     String age;
                     age= sc.nextLine();
-                    animal.setAge(age);
-                    break;
-
-
-
-
-
-
                     
+                    zoo.addAnimal(species,name,age);
+                
+                    break;
+                    case 2:
+                    zoo.listAnimals();
+                    break;
+                    case 3:
+                    zoo.runAnimals();
+                    break;
                     case 0:
                     System.out.println("Kiitos ohjelman käytöstä.");
                     exit=true;
